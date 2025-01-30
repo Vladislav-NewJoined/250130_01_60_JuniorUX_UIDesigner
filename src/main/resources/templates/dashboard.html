@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+<h1>Dashboard</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Status</th>
+        <th>Online Percentage</th>
+        <th>Revenue (USD)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="station : ${stations}">
+        <td th:text="${station.name}"></td>
+        <td th:text="${station.address}"></td>
+        <td th:text="${station.isOnline ? 'Online' : 'Offline'}"></td>
+        <td th:text="${station.onlinePercentage} + '%'"></td>
+        <td th:text="${station.revenue}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
