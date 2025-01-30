@@ -14,7 +14,6 @@ public class Station {
     }
 
     // Геттеры и сеттеры
-
     public String getName() {
         return name;
     }
